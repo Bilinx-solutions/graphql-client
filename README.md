@@ -1,41 +1,39 @@
-
 # Minimal GraphQL Laravel Client
 
 Minimal GraphQL client for Laravel.
-
 
 ## Requirements
 
 - Composer 2+
 
-
 ## Installation
 
 Install Package (Composer 2+)
-```bash
-composer require bendeckdavid/graphql-client
-```
 
+```bash
+composer require shipper/graphql-client
+```
 
 ## Usage
 
-Enviroment variable 
+Enviroment variable
+
 ```php
 GRAPHQL_ENDPOINT="https://api.spacex.land/graphql/"
 ```
 
-
 ## Authentication
 
 We provide a minimal authentication integration by appending the `Authorization` header to the request client. You can pass the credentials using an `env` variable.
+
 ```php
 GRAPHQL_CREDENTIALS="YOUR_CREDENTIALS"
 ```
 
 You can also pass auth credentials at runtime using `withToken($credentials)` method.
 
-
 'Authorization' header and 'Bearer' Schema are used by default. You can override the default behaviour by defining following variables in your `.env` file.
+
 ```php
 GRAPHQL_AUTHENTICATION_HEADER="Authorization"
 
@@ -43,12 +41,12 @@ GRAPHQL_AUTHENTICATION_HEADER="Authorization"
 GRAPHQL_AUTHENTICATION="bearer"
 ```
 
-
 ## Usage/Examples
 
 Import GraphQL Client Facades
+
 ```php
-use BendeckDavid\GraphqlClient\Facades\GraphQL;
+use Shipper\GraphqlClient\Facades\GraphQL;
 ```
 
 #### Basic use
@@ -155,6 +153,7 @@ return GraphQL::endpoint("https://api.spacex.land/graphql/")
 ## Headers
 
 You can include a header to the request by using the attribute "header" or add multiple headers by "withHeaders":
+
 ```php
 return GraphQL::query($query)
 ->header('name', 'value')
@@ -167,6 +166,7 @@ return GraphQL::query($query)
 ## Context
 
 Add additional context to the request
+
 ```php
 return GraphQL::query($query)
 ->context([
@@ -177,11 +177,9 @@ return GraphQL::query($query)
   ])->get();
 ```
 
-
 ## Author
 
 - David Gutierrez [@bendeckdavid](https://www.github.com/bendeckdavid)
-
 
 ## Top Contributors ⭐
 
@@ -191,5 +189,3 @@ return GraphQL::query($query)
 
 - Ryan Mayberry [@kerkness](https://github.com/kerkness)
 - Jamie Duong [@chiendv](https://github.com/chiendv)
-
-

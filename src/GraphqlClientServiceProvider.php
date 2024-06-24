@@ -1,9 +1,9 @@
 <?php
 
-namespace BendeckDavid\GraphqlClient;
+namespace Shipper\GraphqlClient;
 
 use Illuminate\Support\ServiceProvider;
-use BendeckDavid\GraphqlClient\Classes\Client;
+use Shipper\GraphqlClient\Classes\Client;
 
 class GraphqlClientServiceProvider extends ServiceProvider
 {
@@ -14,11 +14,11 @@ class GraphqlClientServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('graphqlClient', function($app) {
+        $this->app->bind('graphqlClient', function ($app) {
             return new Client(config('graphqlclient.graphql_endpoint'));
         });
-        
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'graphqlclient');
+
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'graphqlclient');
     }
 
     /**
@@ -27,10 +27,10 @@ class GraphqlClientServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {  
-        if ($this->app->runningInConsole()){
+    {
+        if ($this->app->runningInConsole()) {
             $this->publishes([
-            __DIR__.'/../config/config.php' => config_path('graphqlclient.php'),
+                __DIR__ . '/../config/config.php' => config_path('graphqlclient.php'),
             ], 'config');
         }
     }

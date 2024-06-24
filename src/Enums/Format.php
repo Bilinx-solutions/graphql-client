@@ -1,8 +1,9 @@
 <?php
 
-namespace BendeckDavid\GraphqlClient\Enums;
+namespace Shipper\GraphqlClient\Enums;
 
-abstract class Format{
+abstract class Format
+{
     const JSON = 'json';
     const ARRAY = 'array';
 }
