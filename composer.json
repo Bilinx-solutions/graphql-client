@@ -1,5 +1,5 @@
 {
-  "name": "bendeckdavid/graphql-client",
+  "name": "shipper/graphql-client",
   "version": "1.3.1",
   "description": "Graphql Client for Laravel",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bendeckdavid/graphql-laravel-client.git"
+    "url": "git+https://github.com/shipper/graphql-laravel-client.git"
   },
   "author": {
     "email": "david@bendeck.dev",
@@ -17,24 +17,24 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bendeckdavid/graphql-laravel-client/issues"
+    "url": "https://github.com/shipper/graphql-laravel-client/issues"
   },
-  "homepage": "https://github.com/bendeckdavid/graphql-laravel-client#readme",
+  "homepage": "https://github.com/shipper/graphql-laravel-client#readme",
   "keywords": [
     "Laravel",
     "Graphql",
     "Graphql Client",
-    "BendeckDavid"
+    "Shipper"
   ],
   "autoload": {
     "psr-4": {
-      "BendeckDavid\\GraphqlClient\\": "src/"
+      "Shipper\\GraphqlClient\\": "src/"
     }
   },
   "extra": {
-    "laravel":{
+    "laravel": {
       "providers": [
-        "BendeckDavid\\GraphqlClient\\GraphqlClientServiceProvider"
+        "Shipper\\GraphqlClient\\GraphqlClientServiceProvider"
       ]
     }
   }

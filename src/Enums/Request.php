@@ -1,8 +1,9 @@
 <?php
 
-namespace BendeckDavid\GraphqlClient\Enums;
+namespace Shipper\GraphqlClient\Enums;
 
-abstract class Request{
+abstract class Request
+{
     const QUERY = 'query';
     const MUTATION = 'mutation';
     const RAW = 'raw';
